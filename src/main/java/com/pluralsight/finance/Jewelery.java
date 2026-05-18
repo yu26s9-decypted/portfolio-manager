@@ -9,6 +9,10 @@ public class Jewelery extends FixedAsset {
     }
 
     public double getValue(){
-        return 0;
+        return karat * marketValue;
+    }
+    
+    public String getName(){
+        return name;
     }
 }

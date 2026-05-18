@@ -13,11 +13,11 @@ public class BankAccount implements  IValuable{
 
 
     public double deposit(double amount){
-        return 0;
+        return balance + amount;
     }
 
     public double withdraw(double amount){
-        return 0;
+        return balance - amount;
     }
 
 
@@ -48,6 +48,7 @@ public class BankAccount implements  IValuable{
     public void setBalance(double balance) {
         this.balance = balance;
     }
+
 
     @Override
     public String toString() {

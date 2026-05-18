@@ -12,7 +12,12 @@ public class House extends FixedAsset {
         this.bedrooms = bedrooms;
     }
 
-    public double getValue(){
-        return 0;
+    public double getValue() {
+        return marketValue * squareFeet;
+
+    }
+
+    public String getName(){
+        return name;
     }
 }

@@ -12,14 +12,27 @@ public class CreditCard implements IValuable {
     }
 
     public double charge(double amount){
-        return amount;
+        return balance - amount;
     }
 
     public double pay(double amount){
-        return amount;
+        return balance + amount;
     }
 
     public double getValue(){
-        return balance;
+        return -balance;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    @Override
+    public String toString() {
+        return "CreditCard{" +
+                "name='" + name + '\'' +
+                ", accountNumber='" + accountNumber + '\'' +
+                ", balance=" + balance +
+                '}';
     }
 }

@@ -1,19 +1,30 @@
 package com.pluralsight;
 
 import com.pluralsight.finance.BankAccount;
+import com.pluralsight.finance.Gold;
 import com.pluralsight.finance.IValuable;
+import com.pluralsight.finance.Portfolio;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class FinanceApplication {
-    public static void main(String[] args){
+     static void main(String[] args){
         BankAccount account1 = new BankAccount("123", "Pam", 12500);
-//        Valuable account2 = new BankAccount(456, "Gary", 1500);
-        IValuable account2 = new BankAccount("456", "Joe", 25839);
+        List<IValuable> asset = new ArrayList<>();
 
-        account1.deposit(100);
+        asset.add(new BankAccount("455", "SoFi National", 25024));
+        asset.add(new Gold("Andys Gold", 450, 12));
 
-        System.out.println(account1);
-        System.out.println(account2);
+        Portfolio p = new Portfolio("Andy's Portfolio", "Andy", asset);
+
+        double portfolioVal = p.getValue();
+         System.out.println(p);
+
+         System.out.printf("Portfolio Value: $%,.2f", portfolioVal);
+
+
 
 
     }
